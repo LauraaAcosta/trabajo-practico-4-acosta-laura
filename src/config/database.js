@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const sequelize = new Sequelize(
+export const sequelize = new Sequelize(
   process.env.DB_NAME,
   process.env.DB_USER,
   process.env.DB_PASSWORD,
@@ -13,7 +13,7 @@ const sequelize = new Sequelize(
   }
 );
 
-const connectDB = async () => {
+export const connectDB = async () => {
   try {
     await sequelize.authenticate();
     console.log('La conexión a la base de datos se ha establecido con éxito.');
@@ -23,4 +23,3 @@ const connectDB = async () => {
   }
 };
 
-export { sequelize, connectDB };

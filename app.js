@@ -1,23 +1,17 @@
 import express from 'express';
-import { sequelize, connectDB } from './config/database.js';
+import dotenv from 'dotenv';
+import  {connectDB} from './src/config/database.js';
 import characterRoutes from './routes/character.routes.js';
 
+dotenv.config()
 const app = express();
 
 app.use(express.json());
 
 app.use('/api', characterRoutes);
 
-const startServer = async () => {
-  try {
-    await connectDB();
-    await sequelize.sync({ force: false });
-    console.log('Base de datos sincronizada!');
-  } catch (error) {
-    console.error('Error al sincronizar la base de datos:', error);
-  }
-};
-
-startServer();
-
-export default app;
+connectDB().then(() =>{
+    app.listen(prototype, () =>{
+        console.log(`Servidor corriendo en http:localhost:%{PORT}`)
+    })
+})
