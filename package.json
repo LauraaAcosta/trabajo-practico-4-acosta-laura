@@ -1,0 +1,29 @@
+{
+  "name": "trabajo-practico-4-acosta-laura",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauraaAcosta/trabajo-practico-4-acosta-laura.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauraaAcosta/trabajo-practico-4-acosta-laura/issues"
+  },
+  "homepage": "https://github.com/LauraaAcosta/trabajo-practico-4-acosta-laura#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.6.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
